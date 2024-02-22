@@ -1,0 +1,165 @@
+<html>
+<head>
+    <meta charset="UFT-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .header {
+            background: #fff200;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-title a {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-nav {
+            margin-left: auto;
+        }
+
+        .header-nav-list {
+            display: flex;
+        }
+
+        .header-nav-item:not(:first-child) {
+            margin-left: 40px;
+        }
+
+        .header-nav-item-link {
+            display: block;
+            color: #fff;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        main {
+            padding-top: 80px;
+        }
+
+        .inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+            box-sizing: content-box;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #696969;
+            font-family: "Noto Serif JP", serif;
+        }
+
+        a {
+            color: #acb400;
+        }
+
+            /*--hover 後--*/
+            a:hover {
+                color: #ff7d00; /*-- 文字色をオレンジ色 --*/
+            }
+
+        .den {
+            font-family: "Noto Serif JP", serif;
+        }
+
+
+        h1 {
+            font-family: "Noto Serif JP", serif;
+        }
+
+        h2 {
+            font-family: "Noto Serif JP", serif;
+        }
+
+        h3 {
+            font-family: "Noto Serif JP", serif;
+        }
+
+        h4 {
+            font-family: "Noto Serif JP", serif;
+        }
+
+        p {
+            font-family: "Noto Serif JP", serif;
+        }
+
+
+        .copy {
+            height: 40px;
+            line-height: 40px;
+            background-color: #fff200;
+        }
+    </style>
+    <script>
+        // ページ内リンクがクリックされた際の処理
+        document.addEventListener('DOMContentLoaded', function () {
+            var links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault(); // デフォルトの挙動をキャンセル
+                    var targetId = this.getAttribute('href').substring(1); // リンク先のIDを取得
+                    var targetElement = document.getElementById(targetId); // リンク先の要素を取得
+                    var headerHeight = document.querySelector('.header').offsetHeight; // ヘッダーの高さを取得
+                    var targetOffsetTop = targetElement.offsetTop - headerHeight; // ヘッダーの高さを考慮したスクロール位置を計算
+                    window.scrollTo({
+                        top: targetOffsetTop,
+                        behavior: 'auto' // アニメーションなし
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="https://aaaaaaaaaaaanetroom.github.io/" target="_blank">
+                <img src="logo.png" alt="AAAAAAAAAAAA" width="182" height="56">
+            </a>
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item" style="list-style: none; margin-right: 40px;"><a class="header-nav-item-link" href="https://aaaaaaaaaaaanetroom.github.io/main.html#write">Back To Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <a href="https://aaaaaaaaaaaanetroom.github.io/main.html#write">←戻る</a>
+        <blockquote>
+            <h1>自伝1</h1>
+            <h2>社会という歯車</h2>
+            <p>　一回きりであるとわかっているにもかかわらず、取り返しがつかないとわかっているにもかかわらず、人生を適当に過ごして死ぬ人間のなんと多いことか。かつて人間は感情を共有するのに他の人間を欲したが、今や社会という得体のしれない空間に自ら飛び込み、自分の代わりとして歯車を動かさせるために他の人間を欲している。最早人間は社会の歯車となるべく生きているのではないかと思う位である。より良い生活を求めて社会が構成され生活が悪化しているという矛盾。然も皆が社会に洗脳されているが故逃げようとする者もいない。何と人間は哀れなのだろう。私もこの暗い、深い闇の中に落ちて、落ちてゆく…。</p>
+　　　　</blockquote>
+    </main>
+    <section>
+        <center class="copy">
+            <small>&copy;AAAAAAAAAAAA. All rights reserved.</small>
+        </center>
+    </section>
+</body>
+</html>
